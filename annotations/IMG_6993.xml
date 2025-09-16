@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>IMG_6993.png</filename>
+	<path>/home/nischay/Desktop/lpd_maggio/images/IMG_6993.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3929</width>
+		<height>2947</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>license-plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>182</xmin>
+			<ymin>1163</ymin>
+			<xmax>3500</xmax>
+			<ymax>2188</ymax>
+		</bndbox>
+	</object>
+</annotation>
