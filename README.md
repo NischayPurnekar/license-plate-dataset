@@ -1,6 +1,5 @@
-# License Plate Dataset (ICASSP 2026)
-
-This repository contains license plate images and Pascal VOC annotations used in our ICASSP 2026 paper, **“Towards Physical Domain Adversarial Attacks Against License Plate Detection.”**
+# License Plate Dataset
+This repository contains a curated set of license-plate images with corresponding bounding-box annotations in Pascal VOC format. Images are stored in images/ and annotations in annotations/, with one XML per image using the class label license_plate (filenames match exactly, e.g., img_0001.jpg ↔ img_0001.xml). The dataset was generated for our ICASSP work on license-plate detection robustness and can be used to train/evaluate LPD models or reproduce our experiments. See each XML’s <size> for image dimensions; all files are standard 8-bit RGB images. The dataset is used in our ICASSP 2026 paper, **“Towards Physical Domain Adversarial Attacks Against License Plate Detection.”**Please cite the ICASSP paper if you use this dataset.
 
 ## Structure
 - `images/`: license plate images (e.g., 300×300 JPEGs)
