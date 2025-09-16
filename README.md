@@ -1,0 +1,25 @@
+# License Plate Dataset (ICASSP 2026)
+
+This repository contains license plate images and Pascal VOC annotations used in our ICASSP 2026 paper, **“Towards Physical Domain Adversarial Attacks Against License Plate Detection.”**
+
+## Structure
+- `images/`: license plate images (e.g., 300×300 JPEGs)
+- `annotations/`: Pascal VOC XMLs (filenames match images)
+- `splits/` (optional): `train.txt`, `val.txt`, `test.txt` (filenames without extensions)
+
+## Annotation format (Pascal VOC)
+Each XML contains one or more `<object>` entries with `<name>license_plate</name>` and `<bndbox>` (`xmin,ymin,xmax,ymax` in pixel coords).
+
+## Usage example (Python)
+```python
+# Parse one Pascal VOC file
+import xml.etree.ElementTree as ET
+root = ET.parse('annotations/img_0001.xml').getroot()
+for obj in root.findall('object'):
+    name = obj.find('name').text
+    bb = obj.find('bndbox')
+    xmin = int(bb.find('xmin').text)
+    ymin = int(bb.find('ymin').text)
+    xmax = int(bb.find('xmax').text)
+    ymax = int(bb.find('ymax').text)
+    print(name, xmin, ymin, xmax, ymax)
